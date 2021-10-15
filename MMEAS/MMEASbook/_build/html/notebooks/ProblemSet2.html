@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Mathematics Methods for Engineering and Applied Science</title>
+    <title>Problem Set 2 &#8212; Mathematics Methods for Engineering and Applied Science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Mathematics Methods in Engineering and Applied Science" href="ProblemSet1.html" />
+    <link rel="prev" title="Problem Set 1" href="ProblemSet1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,10 +94,15 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="ProblemSet1.html">
-   Mathematics Methods in Engineering and Applied Science
+   Problem Set 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Problem Set 2
   </a>
  </li>
 </ul>
@@ -175,6 +182,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks/ProblemSet2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -184,7 +208,48 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1">
+   Problem 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-2">
+   Problem 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-3">
+   Problem 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-4">
+   Problem 4
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -196,7 +261,673 @@
         
               <div>
                 
-  
+  <div class="section" id="problem-set-2">
+<h1>Problem Set 2<a class="headerlink" href="#problem-set-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problem-1">
+<h2>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h2>
+<p>Consider linear system</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+2x_1 + x_2 = 1\\
+x_1 + 2x_2 + x_3 = 2\\
+x_2 + 2x_3 = 3
+\end{align*}
+\end{split}\]</div>
+<p>(a) Find the <span class="math notranslate nohighlight">\(LU\)</span> factorization of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>.   Show that <span class="math notranslate nohighlight">\(U = DL^T\)</span> with <span class="math notranslate nohighlight">\(D\)</span> diagonal and thus <span class="math notranslate nohighlight">\(A=LDL^T\)</span>. Find the exact solution using the <span class="math notranslate nohighlight">\(LU\)</span> factorization.</p>
+<p>(b) Solve the system using Jacobi and Gauss-Seidel iterations. How many iterations are needed to reduce the relative error of the solution to <span class="math notranslate nohighlight">\(10^{-8}\)</span>?</p>
+<p>(c) Plot in semilog scales the relative errors by both methods as a function of the number of iterations.</p>
+<p>(d) Explain the convergence rate. Which of the methods is better and why?</p>
+<div class="section" id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<p>Let us perform the <span class="math notranslate nohighlight">\(LU\)</span> factorization by hand:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+1 &amp; 2 &amp; 1\\
+0 &amp; 1 &amp; 2
+\end{bmatrix}
+\Rightarrow (R_2 - \frac{1}{2}R_1)
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 1\\
+0 &amp; 1 &amp; 2
+\end{bmatrix}
+\Rightarrow (R_3 - \frac{2}{3}R_2)
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 1\\
+0 &amp; 0 &amp; \frac{4}{3}
+\end{bmatrix}
+= U;
+\hspace{10mm}
+L =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0\\
+\frac{1}{2} &amp; 1 &amp; 0\\
+0 &amp; \frac{2}{3} &amp; 1
+\end{bmatrix}
+\end{align*}
+\end{split}\]</div>
+<p>And check it via <em>numpy</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">lin</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">abc</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">bmatrix</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a LaTeX bmatrix</span>
+
+<span class="sd">    :a: numpy array</span>
+<span class="sd">    :returns: LaTeX bmatrix as a string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;bmatrix can at most display two dimensions&#39;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\begin</span><span class="si">{bmatrix}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="n">rv</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;  &#39;</span> <span class="o">+</span> <span class="s1">&#39; &amp; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+    <span class="n">rv</span> <span class="o">+=</span>  <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\end</span><span class="si">{bmatrix}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rv</span><span class="p">)</span>
+
+<span class="n">E</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">U</span> <span class="o">=</span> <span class="n">lin</span><span class="o">.</span><span class="n">lu</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">permute_l</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">U:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L:
+[[1.         0.         0.        ]
+ [0.5        1.         0.        ]
+ [0.         0.66666667 1.        ]]
+
+U:
+[[2.         1.         0.        ]
+ [0.         1.5        1.        ]
+ [0.         0.         1.33333333]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us show, that <span class="math notranslate nohighlight">\(U = DL^T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L^T = 
+\begin{bmatrix}
+1 &amp; \frac{1}{2} &amp; 0\\
+0 &amp; 1 &amp; \frac{2}{3}\\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+;\hspace{10mm}
+D = 
+\begin{bmatrix}
+2 &amp; 0 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+;\hspace{10mm}
+U = DL^T
+\end{split}\]</div>
+<p>That means, <span class="math notranslate nohighlight">\(A = LU = LDL^T\)</span>.</p>
+<p>Now, let us solve the system using <span class="math notranslate nohighlight">\(LU\)</span> factorization:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Ax = b \hspace{3mm} \Rightarrow \hspace{3mm} LUx = b;
+\\
+\begin{align*}
+\begin{cases}
+Ux = y;\\
+Ly = b
+\end{cases}
+\end{align*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+  1 &amp; 0 &amp; 0\\
+  \frac{1}{2} &amp; 1 &amp; 0\\
+  0 &amp; \frac{2}{3} &amp; 1\\
+\end{bmatrix}
+\begin{bmatrix}
+  y_1\\
+  y_2\\
+  y_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}
+\Rightarrow
+\begin{cases}
+y_1 = 1\\
+y_2 = \frac{3}{2}\\
+y_3 = 2
+\end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 1\\
+0 &amp; 0 &amp; \frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+\frac{3}{2}\\
+2
+\end{bmatrix}
+\Rightarrow
+\begin{cases}
+x_1 = \frac{1}{2}\\
+x_2 = 0\\
+x_3 = \frac{3}{2}
+\end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x = 
+\begin{bmatrix}
+1/2\\
+0\\
+3/2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Next we solve the system using Jacobi and Gauss-Seidel methods:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="n">D</span><span class="p">))</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="n">D</span><span class="p">))</span>
+
+<span class="n">x_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span>
+<span class="n">err</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x_init</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">T</span> <span class="c1">#initial x</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">def</span> <span class="nf">Jacobi</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x_init</span><span class="p">)</span>
+
+    <span class="n">max_iters</span> <span class="o">=</span> <span class="mi">500</span>
+
+    <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    
+
+    <span class="n">iters</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">err</span> <span class="o">&gt;</span> <span class="n">tol</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">iters</span> <span class="o">&lt;=</span> <span class="n">max_iters</span><span class="p">))</span> <span class="p">:</span>
+        <span class="n">iters</span> <span class="o">=</span> <span class="n">iters</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">bb</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">U</span> <span class="o">+</span> <span class="n">L</span><span class="p">)</span><span class="o">*</span><span class="n">x</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">bb</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">err_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x_exact</span><span class="p">)</span>
+
+        <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_iter</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+        <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">err_exact</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span>
+
+    <span class="k">return</span> <span class="n">err_iter</span><span class="p">,</span> <span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">iters</span>
+
+<span class="k">def</span> <span class="nf">Gauss_Seidel</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x_init</span><span class="p">)</span>
+
+    <span class="n">max_iters</span> <span class="o">=</span> <span class="mi">250</span>
+
+    <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+    <span class="n">iters</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">err</span> <span class="o">&gt;</span> <span class="n">tol</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">iters</span> <span class="o">&lt;=</span> <span class="n">max_iters</span><span class="p">)):</span>
+        <span class="n">iters</span> <span class="o">=</span> <span class="n">iters</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">bb</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">U</span><span class="o">*</span><span class="n">x</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">D</span><span class="o">+</span><span class="n">L</span><span class="p">,</span> <span class="n">bb</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">err_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x_exact</span><span class="p">)</span>
+
+        <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_iter</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+        <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">err_exact</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span>
+
+    <span class="k">return</span> <span class="n">err_iter</span><span class="p">,</span> <span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">iters</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+<span class="n">errs_j</span><span class="p">,</span> <span class="n">ex_errs_j</span><span class="p">,</span> <span class="n">x_j</span><span class="p">,</span> <span class="n">i_j</span> <span class="o">=</span> <span class="n">Jacobi</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errs_j</span><span class="p">)</span>
+
+<span class="n">errs_g</span><span class="p">,</span> <span class="n">ex_errs_g</span><span class="p">,</span> <span class="n">x_g</span><span class="p">,</span> <span class="n">i_g</span> <span class="o">=</span> <span class="n">Gauss_Seidel</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errs_g</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;Jacobi&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss_Seidel&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Iterations&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Relative error&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-1</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ProblemSet2_13_0.svg" src="../_images/ProblemSet2_13_0.svg" /></div>
+</div>
+<p>As we see, it took <span class="math notranslate nohighlight">\(26\)</span> iterations for Gauss-Seidel method to reach the target tolerance of <span class="math notranslate nohighlight">\(10^{-8}\)</span>, while Jacobi method required <span class="math notranslate nohighlight">\(54\)</span> iterations.</p>
+<p>This can be explained by the following: in Gauss-Seidel, as soon as we acquire a new iteration of a vector <span class="math notranslate nohighlight">\(x\)</span> component <span class="math notranslate nohighlight">\(x_i^{(k+1)}\)</span>, we instantly utilize this updated value in the computation of the following components: <span class="math notranslate nohighlight">\(x_i^{(k+1)} = f(x_1^{(k+1)}, ..., x_{i-1}^{(k+1)}, x_{i+1}^{(k)}, ..., x_n^{(k)})\)</span>. In Jacobi, we calculate the new vector <span class="math notranslate nohighlight">\(x^{k+1}\)</span> relying solely on the result of the previous iteration: <span class="math notranslate nohighlight">\(x_i^{k+1} = f(x_j^{(k)}),\hspace{3mm}j \neq i\)</span>.</p>
+</div>
+</div>
+<div class="section" id="problem-2">
+<h2>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h2>
+<p>Factor these two matrices <span class="math notranslate nohighlight">\(A\)</span> into <span class="math notranslate nohighlight">\(S\Lambda S^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A1 = 
+\begin{bmatrix}
+1 &amp; 2\\
+0 &amp; 3
+\end{bmatrix}
+,\hspace{3mm}
+A2 =
+\begin{bmatrix}
+1 &amp; 2\\
+0 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Using that factorization, find for both: (a) <span class="math notranslate nohighlight">\(A^3\)</span>; (b) <span class="math notranslate nohighlight">\(A^{-1}\)</span>.</p>
+<div class="section" id="id1">
+<h3>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Firstly, we find the eigenvalues and eigenvectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1-\lambda &amp; 2\\
+0 &amp; 3-\lambda
+\end{bmatrix}
+ = 0
+\end{split}\]</div>
+<p>By performing simple calculations by hand, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_1 = 
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_1 = 1
+\\
+h_2 =
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_2 = 3
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We normalized the eigenvectors</p>
+</div>
+<p>Now let’s perform a check with <em>numpy</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">val1</span><span class="p">,</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E_values A1:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E_vectors A1:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vec1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E_values A1:
+[1. 3.]
+E_vectors A1:
+[[1.         0.70710678]
+ [0.         0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we have our vectors and values, we can construct <span class="math notranslate nohighlight">\(\Lambda\)</span> and <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(S^{-1}\)</span> matrices:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Lambda</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">val1</span><span class="p">))</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">vec1</span>
+<span class="n">Si</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lambda:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Lambda</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S_inverse:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Si</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S:
+[[1.         0.70710678]
+ [0.         0.70710678]]
+Lambda:
+[[1. 0.]
+ [0. 3.]]
+S_inverse:
+[[ 1.         -1.        ]
+ [ 0.          1.41421356]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}S = 
+\begin{bmatrix}
+1 &amp; \sqrt{2}/2\\
+0 &amp; \sqrt{2}/{2}
+\end{bmatrix}
+;\hspace{3mm}
+\Lambda = 
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 3
+\end{bmatrix}
+;\hspace{3mm}
+S^{-1} = 
+\begin{bmatrix}
+1 &amp; -1\\
+0 &amp; 2/\sqrt{2}
+\end{bmatrix}
+\end{split}\]</div>
+<p>From now, we can fing the <span class="math notranslate nohighlight">\(A^3\)</span> powered matrix by simply multiplying the decomposition:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^3 = S\Lambda S^{-1} S \Lambda S^{-1} S \Lambda S^{-1} =
+\\
+\hspace{1mm}
+\\
+= S \Lambda^3 S^{-1}.
+\end{split}\]</div>
+<p>And for <span class="math notranslate nohighlight">\(\Lambda\)</span> it is easy to power because it is a diagonal matrix.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Lambda ^3 =
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 9
+\end{bmatrix}
+,
+\\
+\hspace{1mm}
+\\
+S\Lambda ^3 S^{-1} = 
+\begin{bmatrix}
+1 &amp; 8\\
+0 &amp; 9
+\end{bmatrix}
+\end{split}\]</div>
+<p>For inverse matrix:</p>
+<div class="math notranslate nohighlight">
+\[
+S\Lambda S^{-1} A_1^{-1} = E, \Rightarrow A_1^{-1} = S^{-1} \Lambda ^{-1} S
+\]</div>
+<p>We already have <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(S^{-1}\)</span>, and for diagonal <span class="math notranslate nohighlight">\(\Lambda\)</span> the inverse matrix contains the inverse diagonal elements of <span class="math notranslate nohighlight">\(\Lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Lambda ^{-1}= 
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 1/3
+\end{bmatrix}
+\end{split}\]</div>
+<p>So we easily find <span class="math notranslate nohighlight">\(A_1^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_1^{-1} = 
+\begin{bmatrix}
+1 &amp; \sqrt{2}{3}\\
+0 &amp; 1/3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Now let’s look at the second matrix <span class="math notranslate nohighlight">\(A_2\)</span>. Instantly we notice it is a rank-1 matrix, thus, <span class="math notranslate nohighlight">\(A_2^{-1}\)</span> matrix doesn’t exist.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_1 = 
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_1 = 0
+\\
+\hspace{1mm}
+\\
+h_2 =
+\begin{bmatrix}
+1\\
+3
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_2 = 4
+\end{split}\]</div>
+<p>It’s eigenvectors are non-collinear and form a basis in 2-dimensional space. Thus we can perform the factorization.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S = 
+\begin{bmatrix}
+1 &amp; 1\\
+-1 &amp; 3
+\end{bmatrix}
+;\hspace{3mm}
+\Lambda = 
+\begin{bmatrix}
+0 &amp; 0\\
+0 &amp; 4
+\end{bmatrix}
+;\hspace{3mm}
+S^{-1} =  
+\begin{bmatrix}
+3/4 &amp; -1/4\\
+1/4 &amp; 1/4
+\end{bmatrix}
+\end{split}\]</div>
+<p>For <span class="math notranslate nohighlight">\(A_2^3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_2^3 = 
+\begin{bmatrix}
+64 &amp; 64\\
+192 &amp; 192
+\end{bmatrix}
+.
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="problem-3">
+<h2>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h2>
+<p>Given a system <span class="math notranslate nohighlight">\(Ax = b\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = 
+\begin{bmatrix}
+  1 &amp; -1 &amp; -3\\
+  2 &amp; 3 &amp; 4\\
+  -2 &amp; 1 &amp; 4\\
+\end{bmatrix}
+,\hspace{3mm}
+b = 
+\begin{bmatrix}
+  3\\
+  a\\
+  -1\\
+\end{bmatrix}
+,
+\end{split}\]</div>
+<p>for which <span class="math notranslate nohighlight">\(a\)</span> there is a solution? Find the general solution of the system for that <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="section" id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Let’s check the matrix’ rank:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rank: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">rank</span><span class="p">()))</span>
+<span class="n">A</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rank: 2
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; -1\\0 &amp; 1 &amp; 2\\0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>This matrix is a rank-2 matrix. Let’s find it’s left nullspace, write down the solvability condition and find the appropriate <span class="math notranslate nohighlight">\(a\)</span>.
+Starting with the left null-space:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">nullspace</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{8}{5}\\\frac{1}{5}\\1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>We want to fulfill the following condition:</p>
+<div class="math notranslate nohighlight">
+\[
+y^Tb = 0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">ans</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{a: -19}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we see, the system is solvable with <span class="math notranslate nohighlight">\(a = -19\)</span>. Let us perform some check:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="mi">19</span><span class="p">)</span>
+<span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="n">bs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[\begin{matrix}0\end{matrix}\right]\]</div>
+</div>
+</div>
+<p>Now as we have our vector <span class="math notranslate nohighlight">\(b\)</span> with wich the system is solvable, we may find the general solution for the system:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a b c&#39;</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">A</span><span class="p">,</span> <span class="n">bs</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linsolve</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">bs</span><span class="p">),</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span> <span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( c - 2, \  - 2 c - 5, \  c\right)\right\}\]</div>
+</div>
+</div>
+<p>With <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span> we get our solution:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x =
+\begin{bmatrix}
+-2\\
+-5\\
+0
+\end{bmatrix}
++
+\begin{bmatrix}
+1\\
+-2\\
+1
+\end{bmatrix}
+\cdot
+c.
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="problem-4">
+<h2>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -231,7 +962,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Mathematics Methods in Engineering and Applied Science</p>
+                <p class="prevnext-title">Problem Set 1</p>
             </div>
         </a>
     </div>
