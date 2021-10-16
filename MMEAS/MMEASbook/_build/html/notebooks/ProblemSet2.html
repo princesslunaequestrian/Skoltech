@@ -249,6 +249,37 @@
   <a class="reference internal nav-link" href="#problem-4">
    Problem 4
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-5">
+   Problem 5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-6">
+   Problem 6
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Solution
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -739,7 +770,7 @@ A_1^{-1} =
 0 &amp; 1/3
 \end{bmatrix}
 \end{split}\]</div>
-<p>Now let’s look at the second matrix <span class="math notranslate nohighlight">\(A_2\)</span>. Instantly we notice it is a rank-1 matrix, thus, <span class="math notranslate nohighlight">\(A_2^{-1}\)</span> matrix doesn’t exist.</p>
+<p>Now let’s look at the second matrix <span class="math notranslate nohighlight">\(A_2\)</span>. Instantly we notice it is a rank-1 matrix, meaning, <span class="math notranslate nohighlight">\(A_2^{-1}\)</span> matrix doesn’t exist.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 h_1 = 
@@ -786,8 +817,8 @@ S^{-1} =
 \[\begin{split}
 A_2^3 = 
 \begin{bmatrix}
-64 &amp; 64\\
-192 &amp; 192
+16 &amp; 16\\
+48 &amp; 48
 \end{bmatrix}
 .
 \end{split}\]</div>
@@ -925,6 +956,614 @@ c.
 </div>
 <div class="section" id="problem-4">
 <h2>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h2>
+<p>Consider the system of linear differential equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{du}{dt} = Au, \hspace{3mm} A = 
+\begin{bmatrix}
+  1 &amp; -1 &amp; 0\\
+  -1 &amp; 2 &amp; -1\\
+  0 &amp; -1 &amp; 1\\
+\end{bmatrix}
+.
+\end{split}\]</div>
+<p>(a) Using the spectral factorization of A, determine the general solution of the system.<br />
+(b) Find the behavior of the solution at large <span class="math notranslate nohighlight">\(t\)</span> if the initial condition is <span class="math notranslate nohighlight">\(u(0) = \begin{bmatrix} 1 &amp; -1 &amp; 1 \end{bmatrix} ^T\)</span></p>
+<div class="section" id="id3">
+<h3>Solution<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Check the rank of the matrix:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">A</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Spectral decomposition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">diagonalize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S:&quot;</span><span class="p">)</span>
+<span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; -1 &amp; 1\\1 &amp; 0 &amp; -2\\1 &amp; 1 &amp; 1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lambda:&quot;</span><span class="p">)</span>
+<span class="n">L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lambda:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 3\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S^-1:&quot;</span><span class="p">)</span>
+<span class="n">S</span><span class="o">**-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S^-1:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{1}{3} &amp; \frac{1}{3} &amp; \frac{1}{3}\\- \frac{1}{2} &amp; 0 &amp; \frac{1}{2}\\\frac{1}{6} &amp; - \frac{1}{3} &amp; \frac{1}{6}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>The general solution may be written as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{du}{dt} = S\Lambda S^{-1}u\\
+S^{-1}\frac{du}{dt} = \Lambda S^{-1}u \\
+\frac{dv}{dt} = \Lambda v, \hspace{3mm} v = S^{-1}u \Rightarrow \\
+\Rightarrow
+v = e^{\Lambda t}v_0; \hspace{3mm} u = Se^{\Lambda t}S^{-1}u_0
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x, y, z, t&#39;</span><span class="p">)</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">z0</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x0, y0, z0&#39;</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">S</span><span class="o">**-</span><span class="mi">1</span><span class="o">*</span><span class="n">u</span>
+
+<span class="n">elambdat</span> <span class="o">=</span> <span class="p">(</span><span class="n">L</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span>
+
+<span class="n">u0</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">z0</span><span class="p">])</span>
+
+<span class="n">u_ans</span> <span class="o">=</span> <span class="n">S</span><span class="o">*</span><span class="n">elambdat</span><span class="o">*</span><span class="n">S</span><span class="o">**-</span><span class="mi">1</span><span class="o">*</span><span class="n">u0</span><span class="p">;</span> <span class="n">u_ans</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+<span class="n">u_ans</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{x_{0} \left(e^{3 t} + 3 e^{t} + 2\right)}{6} + \frac{y_{0} \left(1 - e^{3 t}\right)}{3} + \frac{z_{0} \left(e^{3 t} - 3 e^{t} + 2\right)}{6}\\\frac{x_{0} \left(1 - e^{3 t}\right)}{3} + \frac{y_{0} \left(2 e^{3 t} + 1\right)}{3} + \frac{z_{0} \left(1 - e^{3 t}\right)}{3}\\\frac{x_{0} \left(e^{3 t} - 3 e^{t} + 2\right)}{6} + \frac{y_{0} \left(1 - e^{3 t}\right)}{3} + \frac{z_{0} \left(e^{3 t} + 3 e^{t} + 2\right)}{6}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>With <span class="math notranslate nohighlight">\(u_0 = \begin{bmatrix}1 &amp; -1 &amp; 1\end{bmatrix}\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u_ans_num</span> <span class="o">=</span> <span class="n">u_ans</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x0</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y0</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">z0</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">u_ans_num</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{2 e^{3 t}}{3} + \frac{1}{3}\\\frac{1}{3} - \frac{4 e^{3 t}}{3}\\\frac{2 e^{3 t}}{3} + \frac{1}{3}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>We can decompose the solution into two vectors:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vec_c</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">u_e</span> <span class="o">=</span> <span class="n">u_ans_num</span> <span class="o">-</span> <span class="n">vec_c</span>
+<span class="n">u_e</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{2 e^{3 t}}{3}\\- \frac{4 e^{3 t}}{3}\\\frac{2 e^{3 t}}{3}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+u =
+\begin{bmatrix}
+1/3\\
+1/3\\
+1/3
+\end{bmatrix}
++
+\frac{2}{3}
+\begin{bmatrix}
+1\\
+-2\\
+1
+\end{bmatrix}
+e^{3t}
+\end{split}\]</div>
+<p>With large <span class="math notranslate nohighlight">\(t\)</span>, the solution will approach the <span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; -2 &amp; 1\end{bmatrix}^T\)</span> direction.</p>
+</div>
+</div>
+<div class="section" id="problem-5">
+<h2>Problem 5<a class="headerlink" href="#problem-5" title="Permalink to this headline">¶</a></h2>
+<p>For matrix <span class="math notranslate nohighlight">\(A = \begin{bmatrix} 2021 &amp; 20 &amp; 0\\ 20 &amp; 2021 &amp; 21\\ 0 &amp; 21 &amp; 2021\\ \end{bmatrix} \)</span> and vector
+<span class="math notranslate nohighlight">\(b = \begin{bmatrix}2\\1\\0\end{bmatrix}\)</span>,
+what is the most likely direction of vector <span class="math notranslate nohighlight">\(x = A^{2021}b\)</span>?</p>
+<div class="section" id="id4">
+<h3>Solution<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Diagonalization:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2021</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">2021</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">2021</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">S</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">diagonalize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+A^{2021} = S\Lambda^{2021} S^{-1}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lambda:&quot;</span><span class="p">)</span>
+<span class="n">L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lambda:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1992 &amp; 0 &amp; 0\\0 &amp; 2021 &amp; 0\\0 &amp; 0 &amp; 2050\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S:&quot;</span><span class="p">)</span>
+<span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}20 &amp; -21 &amp; 20\\-29 &amp; 0 &amp; 29\\21 &amp; 20 &amp; 21\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>we will extract the common denominator from the <span class="math notranslate nohighlight">\(\Lambda\)</span>, as we are only interested in the direction (this step is not necessary but is helpful)</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">denom</span> <span class="o">=</span> <span class="mi">2050</span>
+<span class="n">L_denom</span> <span class="o">=</span> <span class="n">L</span><span class="o">/</span><span class="n">denom</span>
+<span class="n">L_denom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{996}{1025} &amp; 0 &amp; 0\\0 &amp; \frac{2021}{2050} &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>As we see, upon exponentiation of the matrix, the <span class="math notranslate nohighlight">\(3^{rd}\)</span> diagonal element of the matrix <span class="math notranslate nohighlight">\(\Lambda\)</span> will stay equal to <span class="math notranslate nohighlight">\(1\)</span>, while the <span class="math notranslate nohighlight">\(1^{st}\)</span> and the <span class="math notranslate nohighlight">\(2^{nd}\)</span> tend to zero. So we may neglect the <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> in comparison with <span class="math notranslate nohighlight">\(\lambda_3\)</span>.</p>
+<p>We will substitute the matrix with the following pseudo-matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Lambda_{pseudo} =
+\begin{bmatrix}
+0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1\\
+\end{bmatrix}
+\end{split}\]</div>
+<p>because the denominator is a scalar that can be removed to the left of the whole equation chain:</p>
+<div class="math notranslate nohighlight">
+\[
+x = D^{2021}S\Lambda _D^{2021} S^{-1}b \approx D^{2021}S\Lambda _{pseudo}^{2021}S^{-1}b
+\]</div>
+<p>And to know the direction, we may get rid of the denominator completely, also noting that <span class="math notranslate nohighlight">\(\Lambda_{pseudo}^{2021} = \Lambda _{pseudo}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+x_{dir} = S\Lambda _{pseudo} S^{-1} b
+\]</div>
+<p>The only thing left is to explicitly calculate the <span class="math notranslate nohighlight">\(x_{dir}\)</span> vector, conjure a bit with the denominators (remember, we don’t care about the length of the vector) and find the direction:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L_pseudo</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">S</span><span class="o">*</span><span class="n">L_pseudo</span><span class="o">*</span><span class="n">S</span><span class="o">**-</span><span class="mi">1</span><span class="o">*</span><span class="n">b</span>
+<span class="n">x</span><span class="o">*</span><span class="mi">1682</span><span class="o">/</span><span class="mi">1380</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1\\\frac{29}{20}\\\frac{21}{20}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x_{dir} =
+\begin{bmatrix}
+1\\
+\frac{29}{20}\\
+\frac{21}{20}
+\end{bmatrix}
+\approx
+\begin{bmatrix}
+1\\
+1.5\\
+1
+\end{bmatrix}
+.\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="problem-6">
+<h2>Problem 6<a class="headerlink" href="#problem-6" title="Permalink to this headline">¶</a></h2>
+<p>Four unit masses are joined by springs of unit spring constant on a ring of unit raduis as shown in the figure.</p>
+<div class="figure align-default" id="directive-fig">
+<a class="reference internal image-reference" href="../_images/Problem6.png"><img alt="../_images/Problem6.png" src="../_images/Problem6.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">System illustration</span><a class="headerlink" href="#directive-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>Convince yourself that Newton’s second law for the masses results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ddot{\phi}_1 = -2\phi_1 + \phi_2 + \phi_4 \\
+\ddot{\phi}_2 = -2\phi_2 + \phi_3 + \phi_1 \\
+\ddot{\phi}_3 = -2\phi_3 + \phi_4 + \phi_2 \\
+\ddot{\phi}_4 = -2\phi_4 + \phi_1 + \phi_3 \\\end{split}\]</div>
+<p>or <span class="math notranslate nohighlight">\(\ddot{u} = -K_4 u\)</span>, where <span class="math notranslate nohighlight">\(u = \begin{bmatrix}\phi_1 \\ \phi_2\\ \phi_3 \\ \phi_4\end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(K_4\)</span> is a matrix of coefficients.</p>
+<p>(a) How can you see that <span class="math notranslate nohighlight">\(K_4\)</span> is singular? What is the physical meaning of this fact?</p>
+<p>(b) Find the eigenvalues and eigenvectors of <span class="math notranslate nohighlight">\(K_4\)</span> and using the spectral factorization, <span class="math notranslate nohighlight">\(K_4 = S \Lambda S^{-1}\)</span>, diagonalize and solve the system.</p>
+<p>(c) Describe the normal modes of the oscillators in terms of eigenvalues and eigenvectors of <span class="math notranslate nohighlight">\(K_4\)</span>. What are the largest and smallest frequencies and corresponding eigenvectors? Can you explain the physics of the largest frequency mode?</p>
+<p>(d) What is the solution that starts at <span class="math notranslate nohighlight">\(u(0) = \begin{bmatrix}1 &amp; 0 &amp; -1 &amp; 0\end{bmatrix}^T\)</span> and <span class="math notranslate nohighlight">\(\dot{u}(0) = 0\)</span>?</p>
+<div class="section" id="id5">
+<h3>Solution<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">K</span> <span class="o">=</span> <span class="o">-</span><span class="n">K</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rank: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">K</span><span class="o">.</span><span class="n">rank</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rank: 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>The singularity of the matrix implies that we have a redundant coordinate: the system is described with 4 variables, while 3 independend variables would be enough.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Function</span>
+
+<span class="n">phi1</span><span class="p">,</span> <span class="n">phi2</span><span class="p">,</span> <span class="n">phi3</span><span class="p">,</span> <span class="n">phi4</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;phi1, phi2, phi3, phi4&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Function</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="n">phi1</span> <span class="o">=</span> <span class="n">phi1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">phi2</span> <span class="o">=</span> <span class="n">phi2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">phi3</span> <span class="o">=</span> <span class="n">phi3</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">phi4</span> <span class="o">=</span> <span class="n">phi4</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">phi1d</span><span class="p">,</span> <span class="n">phi2d</span><span class="p">,</span> <span class="n">phi3d</span><span class="p">,</span> <span class="n">phi4d</span> <span class="o">=</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">phi1</span><span class="p">,</span> <span class="n">phi2</span><span class="p">,</span> <span class="n">phi3</span><span class="p">,</span> <span class="n">phi4</span><span class="p">))</span>
+<span class="n">phi1dd</span><span class="p">,</span> <span class="n">phi2dd</span><span class="p">,</span> <span class="n">phi3dd</span><span class="p">,</span> <span class="n">phi4dd</span> <span class="o">=</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">phi1d</span><span class="p">,</span> <span class="n">phi2d</span><span class="p">,</span> <span class="n">phi3d</span><span class="p">,</span> <span class="n">phi4d</span><span class="p">))</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">phi1</span><span class="p">,</span> <span class="n">phi2</span><span class="p">,</span> <span class="n">phi3</span><span class="p">,</span> <span class="n">phi4</span><span class="p">])</span>
+<span class="n">udd</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">phi1dd</span><span class="p">,</span> <span class="n">phi2dd</span><span class="p">,</span> <span class="n">phi3dd</span><span class="p">,</span> <span class="n">phi4dd</span><span class="p">])</span>
+
+
+<span class="n">eig</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">eigenvects</span><span class="p">()</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">h21</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">h22</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">h3</span> <span class="o">=</span> <span class="n">eig</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\lambda_1 = 4, \hspace{3mm}
+h_1 = \begin{bmatrix}-1\\1\\-1\\1\end{bmatrix};\\
+\lambda_2 = 2, \hspace{3mm}
+h_{2_1} = \begin{bmatrix}-1\\0\\1\\0\end{bmatrix}, \hspace{3mm}
+h_{2_2} = \begin{bmatrix}0\\-1\\0\\1\end{bmatrix};\\
+\lambda_3 = 0, \hspace{3mm}
+h_3 = \begin{bmatrix}1\\1\\1\\1\end{bmatrix}.
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ss</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">diagonalize</span><span class="p">()</span>
+<span class="n">L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 2 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 2 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 4\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>We found the <span class="math notranslate nohighlight">\(\Lambda\)</span> component of the diagonalized matrix <span class="math notranslate nohighlight">\(K\)</span>, now we can proceed with solving:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ddot{u} = S\Lambda S^{-1}u,\\
+\ddot{v} = \Lambda v, \hspace{3mm} v = S^{-1}u;
+\\\hspace{3mm}
+\ddot{v}_i = c_1\cos{(\sqrt{\lambda_i}t)} + c_2\sin{(\sqrt{\lambda_i}t)}
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the eigenvalues are <span class="math notranslate nohighlight">\(\geq 0\)</span>. That means, our solutions are representable as a sum of <span class="math notranslate nohighlight">\(\sin\)</span> and <span class="math notranslate nohighlight">\(\cos\)</span> functions.</p>
+</div>
+<p>Finally, our general solution looks like this:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_1(t) = c_1\cos{(2t)} + c_2\sin{(2t)};\\
+v_2(t) = c_3\cos{(\sqrt{2}t)} + c_4\sin{(\sqrt{2}t)};\\
+v_3(t) = c_5\cos{(\sqrt{2}t)} + c_6\sin{(\sqrt{2}t)};\\
+v_4(t) = (c_7 + c_8t)
+\end{split}\]</div>
+<p>and after returning into original basis (<span class="math notranslate nohighlight">\(u = Sv\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+u = (c_7 + c_8t)h_3 \\
++\\
+(c_{3}\cos{(\sqrt{2}t)} + c_{4}\sin{(\sqrt{2}t)})h_{2_1} \\
++\\
+(c_{5}\cos{(\sqrt{2}t)} + c_{6}\sin{(\sqrt{2}t)})h_{2_2} \\
++\\
+(c_1\cos{(2t)} + c_2\sin{(2t)})h_1
+\end{align*}
+\end{split}\]</div>
+<p>Let’s confirm this with <em>sympy</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">v4</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;v1, v2, v3, v4&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Function</span><span class="p">)</span>
+<span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">,</span> <span class="n">c4</span><span class="p">,</span> <span class="n">c5</span><span class="p">,</span> <span class="n">c6</span><span class="p">,</span> <span class="n">c7</span><span class="p">,</span> <span class="n">c8</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;c1, c2, c3, c4, c5, c6, c7, c8&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">v1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">v2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">v3</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v4</span> <span class="o">=</span> <span class="n">v4</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">v1</span> <span class="o">=</span> <span class="n">c7</span> <span class="o">+</span> <span class="n">c8</span><span class="o">*</span><span class="n">t</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">c3</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">c4</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">c5</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">c6</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v4</span> <span class="o">=</span> <span class="n">c1</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">c2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">v4</span><span class="p">])</span>
+
+<span class="n">Ss</span><span class="o">*</span><span class="n">v</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}- c_{1} \cos{\left(2 t \right)} - c_{2} \sin{\left(2 t \right)} - c_{3} \cos{\left(\sqrt{2} t \right)} - c_{4} \sin{\left(\sqrt{2} t \right)} + c_{7} + c_{8} t\\c_{1} \cos{\left(2 t \right)} + c_{2} \sin{\left(2 t \right)} - c_{5} \cos{\left(\sqrt{2} t \right)} - c_{6} \sin{\left(\sqrt{2} t \right)} + c_{7} + c_{8} t\\- c_{1} \cos{\left(2 t \right)} - c_{2} \sin{\left(2 t \right)} + c_{3} \cos{\left(\sqrt{2} t \right)} + c_{4} \sin{\left(\sqrt{2} t \right)} + c_{7} + c_{8} t\\c_{1} \cos{\left(2 t \right)} + c_{2} \sin{\left(2 t \right)} + c_{5} \cos{\left(\sqrt{2} t \right)} + c_{6} \sin{\left(\sqrt{2} t \right)} + c_{7} + c_{8} t\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+u = 
+\begin{bmatrix}
+\phi_1(t)\\
+\phi_2(t)\\
+\phi_3(t)\\
+\phi_4(t)
+\end{bmatrix} = \\
+\\ \hspace{1mm}
+\\ \hspace{1mm}
+=
+\begin{bmatrix}
+  -c_1cos(2t) &amp; - &amp; c_2sin(2t) &amp; - &amp; c_3cos(\sqrt{2}t) &amp; - &amp; c_4sin(\sqrt{2}t) &amp; + &amp; c_7 &amp; + &amp; c_8t\\
+  c1cos(2t) &amp; + &amp; c_2sin(2t) &amp; - &amp; c_5cos(\sqrt{2}t) &amp; - &amp; c_6sin(\sqrt{2}t) &amp; + &amp; c_7 &amp; + &amp; c_8t\\
+  -c_1cos(2t) &amp; - &amp; c_2sin(2t) &amp; + &amp; c_3cos(\sqrt{2}t) &amp; + &amp; c_4sin(\sqrt{2}t) &amp; + &amp; c_7 &amp; + &amp; c_8t\\
+  c1cos(2t) &amp; + &amp; c_2sin(2t) &amp; + &amp; c_5cos(\sqrt{2}t) &amp; + &amp; c_6sin(\sqrt{2}t) &amp; + &amp; c_7 &amp; + &amp; c_8t\\
+\end{bmatrix}
+\end{split}\]</div>
+<p>We can analyze the system by looking at the eigenvalues and eigenvectors.
+The eigenvalue <span class="math notranslate nohighlight">\(\lambda_1 = 0\)</span> and the corresponding <span class="math notranslate nohighlight">\(h_1 = \begin{bmatrix}1 &amp; 1 &amp; 1 &amp; 1\end{bmatrix}^T\)</span> represent the rotational motion of the system as a whole. It’s frequency is 0, and the time function <span class="math notranslate nohighlight">\(f_1(t) = c_7 + c_8t\)</span> accounts for the initial position <span class="math notranslate nohighlight">\(c_7\)</span> and the initial velocity <span class="math notranslate nohighlight">\(c_8\)</span>.</p>
+<p>The rest of the eigen-entities correspond to a certain type of oscillation, see the related picture.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/Problem6_2.jpg"><img alt="../_images/Problem6_2.jpg" src="../_images/Problem6_2.jpg" style="height: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Oscillation types</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>The eigenvalues correspond to the amplitude of the oscillations.
+The oscillations corresponding to the <span class="math notranslate nohighlight">\(\lambda_1 = 4\)</span> will be the most frequent, because the eigenvalue is effectively the squared frequency in the harmonic time function.</p>
+<p>Now let us analyze the initial conditions:</p>
+<p><span class="math notranslate nohighlight">\(
+u(0) = \begin{bmatrix}1 &amp; 0 &amp; -1 &amp; 0\end{bmatrix}^T\)</span> and <span class="math notranslate nohighlight">\(\dot{u}(0) = 0.
+\)</span></p>
+<p>Let us start top-down.</p>
+<ul class="simple">
+<li><p>Firstly, we substitude <span class="math notranslate nohighlight">\(t\)</span> with <span class="math notranslate nohighlight">\(0\)</span> at the general solution and solve for <span class="math notranslate nohighlight">\(u(0)\)</span>:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u0</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">u0d</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">c_vec</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">,</span> <span class="n">c4</span><span class="p">,</span> <span class="n">c5</span><span class="p">,</span> <span class="n">c6</span><span class="p">,</span> <span class="n">c7</span><span class="p">,</span> <span class="n">c8</span><span class="p">])</span>
+
+<span class="n">S0</span> <span class="o">=</span> <span class="n">Ss</span><span class="o">*</span><span class="n">v</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">S0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}- c_{1} - c_{3} + c_{7}\\c_{1} - c_{5} + c_{7}\\- c_{1} + c_{3} + c_{7}\\c_{1} + c_{5} + c_{7}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">S0</span> <span class="o">-</span> <span class="n">u0</span><span class="p">,</span> <span class="n">c_vec</span><span class="p">)</span>
+<span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{c1: 0, c3: -1, c5: 0, c7: 0}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We get the following constants:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c_vec_s</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">c_vec</span><span class="p">)</span>
+<span class="n">c_vec_s</span> <span class="o">=</span> <span class="n">c_vec_s</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+<span class="n">c_vec_s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}0\\c_{2}\\-1\\c_{4}\\0\\c_{6}\\0\\c_{8}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>And we receive the following semi-solution:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u_s</span> <span class="o">=</span> <span class="n">Ss</span><span class="o">*</span><span class="n">v</span>
+<span class="n">u_s</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}- c_{2} \sin{\left(2 t \right)} - c_{4} \sin{\left(\sqrt{2} t \right)} + c_{8} t + \cos{\left(\sqrt{2} t \right)}\\c_{2} \sin{\left(2 t \right)} - c_{6} \sin{\left(\sqrt{2} t \right)} + c_{8} t\\- c_{2} \sin{\left(2 t \right)} + c_{4} \sin{\left(\sqrt{2} t \right)} + c_{8} t - \cos{\left(\sqrt{2} t \right)}\\c_{2} \sin{\left(2 t \right)} + c_{6} \sin{\left(\sqrt{2} t \right)} + c_{8} t\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Now, to account for <span class="math notranslate nohighlight">\(\dot{u}(0) = 0\)</span>, we need to differentiate our solution <span class="math notranslate nohighlight">\(u\)</span> and apply the condition:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u_s_1</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">u_s</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">u_s_1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}- 2 c_{2} - \sqrt{2} c_{4} + c_{8}\\2 c_{2} - \sqrt{2} c_{6} + c_{8}\\- 2 c_{2} + \sqrt{2} c_{4} + c_{8}\\2 c_{2} + \sqrt{2} c_{6} + c_{8}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol2</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">u_s_1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c4</span><span class="p">,</span> <span class="n">c6</span><span class="p">,</span> <span class="n">c8</span><span class="p">)</span>
+<span class="n">sol2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{c2: 0, c4: 0, c6: 0, c8: 0}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c_vec_s2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">c_vec_s</span><span class="p">)</span>
+<span class="n">c_vec_s2</span> <span class="o">=</span> <span class="n">c_vec_s2</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol2</span><span class="p">)</span>
+<span class="n">c_vec_s2</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+<span class="n">c_vec_s2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}0\\0\\-1\\0\\0\\0\\0\\0\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>We get <span class="math notranslate nohighlight">\(c_3 = -1\)</span> and all other constants equal to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uuu</span> <span class="o">=</span> <span class="n">u_s</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol2</span><span class="p">)</span>
+<span class="n">uuu</span>
+<span class="c1">#print(bmatrix(np.matrix(uuu)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\cos{\left(\sqrt{2} t \right)}\\0\\- \cos{\left(\sqrt{2} t \right)}\\0\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>This is our particular solution for given initial conditions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+u_p(t) = 
+\begin{bmatrix}
+  \cos(\sqrt{2}t)\\
+  0\\
+  -\cos(\sqrt{2}t)\\
+  0\\
+\end{bmatrix}
+\end{split}\]</div>
+<p>But, we may come to this solution by some reasoning. If we look at the initial condition <span class="math notranslate nohighlight">\(u(0)\)</span>, we may notice this is one of the eigenvectors taken with a factor <span class="math notranslate nohighlight">\(-1\)</span>. So, the resulting motion will be a normal mode of the corresponding oscillation. That we can see in our exact solution, with <span class="math notranslate nohighlight">\(c_3 = -1\)</span>.</p>
+</div>
 </div>
 </div>
 
