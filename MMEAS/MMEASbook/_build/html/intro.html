@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mathematical Methods in Engineering and Applied Science &#8212; Mathematics Methods for Engineering and Applied Science</title>
+    <title>Mathematics Methods for Engineering and Applied Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,7 +53,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Problem Set 1" href="notebooks/ProblemSet1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -65,53 +66,8 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Mathematics Methods for Engineering and Applied Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
-   Mathematical Methods in Engineering and Applied Science
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/ProblemSet1.html">
-   Problem Set 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/ProblemSet2.html">
-   Problem Set 2
-  </a>
- </li>
-</ul>
-
-    </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
 </div>
 
 
@@ -126,33 +82,7 @@
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
             
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -185,6 +115,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toctree-l1 toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="intro.html#document-notebooks/ProblemSet1">
+   Problem Set 1
+  </a>
+ </li>
+ <li class="toctree-l1 toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="intro.html#document-notebooks/ProblemSet2">
+   Problem Set 2
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -197,6 +145,1220 @@
 <h1>Mathematical Methods in Engineering and Applied Science<a class="headerlink" href="#mathematical-methods-in-engineering-and-applied-science" title="Permalink to this headline">¶</a></h1>
 <p>This webpage contains all assignments and solutions to the MMEAS course.</p>
 <div class="toctree-wrapper compound">
+<span id="document-notebooks/ProblemSet1"></span><div class="section" id="problem-set-1">
+<h2>Problem Set 1<a class="headerlink" href="#problem-set-1" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="problem-1">
+<h3>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="some-basic-problems-on-matrix-vector-multiplication">
+<h4>Some basic problems on matrix/vector multiplication.<a class="headerlink" href="#some-basic-problems-on-matrix-vector-multiplication" title="Permalink to this headline">¶</a></h4>
+<p>(a) Calculate by hand the following matrix/vector products:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+(i) \hspace{10mm}
+\begin{bmatrix}
+2 &amp; 1\\
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; −2 &amp; 1\\
+2 &amp; 3 &amp; 2
+\end{bmatrix};
+\\
+\\
+(ii) \hspace{10mm}
+\begin{bmatrix}
+2 &amp; -1 &amp; 1\\
+3 &amp; 0 &amp; 4
+\end{bmatrix}
+\begin{bmatrix}
+2 &amp; 1\\
+1 &amp; 2\\
+-1 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p>as a combination of columns of the left matrix aswell as a combination of rows of the right matrix.</p>
+<p>(b) Write down a permutation matrix <span class="math notranslate nohighlight">\(P_4\)</span> that exchanges row 1 with row 3 and row 2with row 4. What is the connection of this matrix with the permutation matricesthat exchange only row 1 and row 3, and only row 2 and row 4?</p>
+</div>
+<div class="section" id="solution">
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="_images/problem1.jpg"><img alt="Problem 1" class="align-center" src="_images/problem1.jpg" style="width: 800px;" /></a>
+</div>
+</div>
+<div class="section" id="problem-2">
+<h3>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h3>
+<p>Given a <span class="math notranslate nohighlight">\(3\times3\)</span> matrix <span class="math notranslate nohighlight">\(A= \begin{bmatrix}a1&amp;a2&amp;a3\end{bmatrix}\)</span> with columns <span class="math notranslate nohighlight">\(a_i\)</span>, find a matrix <span class="math notranslate nohighlight">\(B\)</span> that when multiplied with <span class="math notranslate nohighlight">\(A\)</span>, either from left or right, performs the following operations with <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<p>(a) exchanges row 1 and row 2;<br />
+(b) exchanges columns 1 and 2;<br />
+(c) doubles the first row;<br />
+(d) subtracts twice row 1 from row 2.<br />
+Also find the inverse of this matrix. What doesthe inverse of this <span class="math notranslate nohighlight">\(B\)</span> do?</p>
+<div class="section" id="id1">
+<h4>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="_images/problem2_1.jpg"><img alt="Problem 2" class="align-center" src="_images/problem2_1.jpg" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="attachments/ProblemSet1_data/problem2(2).jpg"><img alt="Problem 2" class="align-center" src="attachments/ProblemSet1_data/problem2(2).jpg" style="width: 800px;" /></a>
+</div>
+</div>
+<div class="section" id="problem-3">
+<h3>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h3>
+<p>For matrix
+A =
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 3\\
+3 &amp; 4 &amp; 5\\
+5 &amp; 6 &amp; 7
+\end{bmatrix}\)</span>
+, determine the following:</p>
+<p>(a) rank;<br />
+(b) eigenvalues and eigenvectors;<br />
+(c) nullspace and left nullspace;<br />
+(d) column space and row space;<br />
+(e) write <span class="math notranslate nohighlight">\(A\)</span> as a sum of rank-1 matrices in at least two different ways.</p>
+<div class="section" id="id2">
+<h4>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="attachments/ProblemSet1_data/problem3(1).jpg"><img alt="Problem 2" class="align-center" src="attachments/ProblemSet1_data/problem3(1).jpg" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="attachments/ProblemSet1_data/problem3(2).jpg"><img alt="Problem 2" class="align-center" src="attachments/ProblemSet1_data/problem3(2).jpg" style="width: 800px;" /></a>
+<p><em><strong>d) Column space and row space:</strong></em></p>
+<ul class="simple">
+<li><p>Column space: <span class="math notranslate nohighlight">\(span(
+\begin{bmatrix}
+1\\
+0\\
+-1
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+2
+\end{bmatrix})
+\)</span>; equals to the row space.</p></li>
+</ul>
+<p><em><strong>e) write <span class="math notranslate nohighlight">\(A\)</span>  as a sum of rank-1 matrices in at least two different ways:</strong></em></p>
+<p>Obviously, we can present the matrix <span class="math notranslate nohighlight">\(A\)</span> as a sum of single-row or single-column rank-1 matricies (with other rows or columns filled with zeros). Also, we have 3 non-colinear eigenvectors, that can be our matrix basis in the canonical decomposition (diagonalization):</p>
+<div class="math notranslate nohighlight">
+\[
+A = UDU^{-1} = \sum\limits_{i=1}\limits^{3}{d_i\lambda_i\lambda_i^T}
+\]</div>
+</div>
+</div>
+<div class="section" id="problem-4">
+<h3>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h3>
+<p>The columns of matrix <span class="math notranslate nohighlight">\(C = 
+\begin{bmatrix}
+2 &amp; 2 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 1 &amp; 1\\
+1 &amp; 2 &amp; 2 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 1\\
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 2
+\end{bmatrix}
+\)</span>
+represent vertices of a cube. Describe transformations of the cube that result from the action on <span class="math notranslate nohighlight">\(C\)</span> of the following three matrices:</p>
+<p><span class="math notranslate nohighlight">\(A_1 = 
+\begin{bmatrix}
+1 &amp; 2 &amp; 2\\
+0 &amp; 2 &amp; 2\\
+0 &amp; 0 &amp; 3
+\end{bmatrix}, \hspace{3mm}
+A_2 = 
+\begin{bmatrix}
+1 &amp; 2 &amp; 2\\
+0 &amp; 2 &amp; 2\\
+0 &amp; 0 &amp; 0
+\end{bmatrix}, \hspace{3mm}
+A3 = 
+\begin{bmatrix}
+0 &amp; 2 &amp; 2\\
+0 &amp; 2 &amp; 2\\
+0 &amp; 0 &amp; 0
+\end{bmatrix}.
+\)</span></p>
+<p>Relate the results to the ranks of <span class="math notranslate nohighlight">\(A_k\)</span> and to the dimensions and bases of the four fundamental subspaces of <span class="math notranslate nohighlight">\(A_k\)</span>. Is there a <span class="math notranslate nohighlight">\(3\times3\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> that can transform a cube into a tetrahedron? Explain.</p>
+<div class="section" id="id3">
+<h4>Solution<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Firstly, let us see what every transformation does with the cube.</p>
+<div class="cell tag_hdie_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating matricies</span>
+
+<span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">A2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">A3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1">#Applying A matricies to the cube</span>
+
+<span class="n">B1</span> <span class="o">=</span> <span class="n">A1</span><span class="o">*</span><span class="n">C</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="n">A2</span><span class="o">*</span><span class="n">C</span>
+<span class="n">B3</span> <span class="o">=</span> <span class="n">A3</span><span class="o">*</span><span class="n">C</span>
+
+<span class="c1">#Plotting</span>
+
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;svg&#39;
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zs</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span> <span class="o">=</span> <span class="n">B1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">B1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zs</span> <span class="o">=</span> <span class="n">B1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">depthshade</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span> <span class="o">=</span> <span class="n">B2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">B2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zs</span> <span class="o">=</span> <span class="n">B2</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">depthshade</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span> <span class="o">=</span> <span class="n">B3</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">B3</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zs</span> <span class="o">=</span> <span class="n">B3</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">depthshade</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Cube Transformations&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;Initial Cube&#39;</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1a848bc78c8&gt;
+</pre></div>
+</div>
+<img alt="C:/Users/backg/OneDrive/Workspace/Study/Skoltech/MMEAS/MMEASbook/_build/jupyter_execute/ProblemSet1_11_1.svg" src="C:/Users/backg/OneDrive/Workspace/Study/Skoltech/MMEAS/MMEASbook/_build/jupyter_execute/ProblemSet1_11_1.svg" /></div>
+</div>
+<p>The points on this 3D plot represent the verticies of the initial cube (blue) and resulting shapes.
+As we see,</p>
+<ul class="simple">
+<li><p>A1 combines some stretching and rotation;</p></li>
+<li><p>A2 projects the first transformation on the <span class="math notranslate nohighlight">\(XY\)</span> plane;</p></li>
+<li><p>A3 projects the first (or the second) transformation on a line.</p></li>
+</ul>
+<p>Now, let’s derive the properties of each matrix <span class="math notranslate nohighlight">\(A_i\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+rg(A_1) = 3;\hspace{3mm}rg(A_2) = 2;\hspace{3mm}rg(A_3) = 1
+\]</div>
+<p>It follows from the Main theorem of Linear Algebra that</p>
+<div class="math notranslate nohighlight">
+\[
+rg(ker(A_1)) = 0;\hspace{3mm}rg(ker(A_2)) = 1;\hspace{3mm}rg(ker(A_3)) = 2
+\]</div>
+<p>That means,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A_1\)</span> maps <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A_2\)</span> maps <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A_3\)</span> maps <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}^1\)</span></p></li>
+</ul>
+<p>That corresponds to our findings in the previous section.</p>
+<p>Let us find the four fundamental subspaces for each <span class="math notranslate nohighlight">\(A_i\)</span> operator:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A_1\)</span> is a full-rank matrix, that means nullspace is empty.</p></li>
+</ul>
+<p>The same applies to <span class="math notranslate nohighlight">\(A_1^T\)</span>. <span class="math notranslate nohighlight">\(A_1\)</span> column space is <span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}
+,
+\begin{bmatrix}
+0\\
+2\\
+0
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+3
+\end{bmatrix}
+\)</span>, as well as for <span class="math notranslate nohighlight">\(A_1^T\)</span> (row space of <span class="math notranslate nohighlight">\(A_1\)</span>).</p>
+<ul class="simple">
+<li><p>for <span class="math notranslate nohighlight">\(A_2\)</span> we solve a simple set of linear equations and receive the following result:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}Null(A_2) = span(
+\begin{bmatrix}
+0\\
+1\\
+-1
+\end{bmatrix}
+)
+; \hspace{3mm} Null(A_2^T) = span(
+\begin{bmatrix}
+0\\
+1\\
+-1
+\end{bmatrix}
+).
+\end{split}\]</div>
+<p>The column space of <span class="math notranslate nohighlight">\(A_2\)</span> is
+<span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+2\\
+0
+\end{bmatrix}
+\)</span>, the row space is the same.</p>
+<ul class="simple">
+<li><p>for <span class="math notranslate nohighlight">\(A_3\)</span>, we have two-dimensional null space: <span class="math notranslate nohighlight">\(Null(A_3) = span(
+\begin{bmatrix}
+1\\
+1\\
+-1
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+-1\\
+1
+\end{bmatrix}
+)\)</span>. It coincides with the nullspace of <span class="math notranslate nohighlight">\(A_3^T\)</span>.</p></li>
+</ul>
+<p>The column space of <span class="math notranslate nohighlight">\(A_3\)</span> is <span class="math notranslate nohighlight">\(span(
+\begin{bmatrix}
+1\\
+1\\
+0
+\end{bmatrix})\)</span>, as well as the row space. This result is easily observed on the visualisation: the result of the 3rd transformation lies on the <span class="math notranslate nohighlight">\(y = x\)</span> line on the <span class="math notranslate nohighlight">\(XY\)</span> plane.</p>
+<div class="cell tag_hdie_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_eig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+    <span class="n">val</span><span class="p">,</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues and eigenvectors for matrix A</span><span class="si">{}</span><span class="s2">:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+<span class="c1">#print_eig(A1, 1)</span>
+<span class="c1">#print_eig(A2, 2)</span>
+<span class="c1">#print_eig(A3, 3)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>On transforming a cube into a tetrahedron:</strong>
+Linear transformation implies that we can describe it only acting on basis vectors.
+That means, I suppose there is no such <span class="math notranslate nohighlight">\(3\times 3\)</span> matrix to perform this operation.</p>
+</div>
+</div>
+<div class="section" id="problem-5">
+<h3>Problem 5<a class="headerlink" href="#problem-5" title="Permalink to this headline">¶</a></h3>
+<p>For matrix
+<span class="math notranslate nohighlight">\(A=
+\begin{bmatrix}
+2 &amp; 1\\
+1 &amp; 2
+\end{bmatrix}
+\)</span>
+determine which unit vector <span class="math notranslate nohighlight">\(x_M\)</span> is stretched the most and which <span class="math notranslate nohighlight">\(x_m\)</span> the least and by how much. That is, find <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(y=Ax\)</span> has the largest (or smallest) possible Euclidian length. You can do this by calculus methods, e.g. using Lagrange multipliers. Relate your findings to eigenvalues and eigenvectors of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="section" id="id4">
+<h4>Solution<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>Firstly, we SVD the matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">u</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;U:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;E:&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;V*:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>U:
+ [[-0.70710678 -0.70710678]
+ [-0.70710678  0.70710678]]
+E: [3. 1.]
+V*:
+ [[-0.70710678 -0.70710678]
+ [-0.70710678  0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that the matricies <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(V*\)</span> may be rewritten as a combination of the following matricies:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U = V^* = 
+\begin{bmatrix}
+-\frac{\sqrt{2}}{2} &amp; -\frac{\sqrt{2}}{2}\\
+-\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2}
+\end{bmatrix}
+=
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+-1 &amp; -1\\
+-1 &amp; 1
+\end{bmatrix}
+=
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1 &amp; -1\\
+1 &amp; 1
+\end{bmatrix}
+\times
+\begin{bmatrix}
+-1 &amp; 0\\
+0 &amp; 1
+\end{bmatrix}
+=\\
+=cR\times M,
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c = \frac{\sqrt{2}}{2}\)</span>, <span class="math notranslate nohighlight">\(cR\)</span> is a rotation matrix with <span class="math notranslate nohighlight">\(\varphi = \frac{1}{4}\pi\)</span>, <span class="math notranslate nohighlight">\(M\)</span> is a mirror operator that mirrors about <span class="math notranslate nohighlight">\(X\)</span> axis.</p>
+<p>The matrix <span class="math notranslate nohighlight">\(\Sigma\)</span> has diagonal elements <span class="math notranslate nohighlight">\(\begin{bmatrix} 3 &amp; 1 \end{bmatrix}\)</span> and represents stretching times 3 along <span class="math notranslate nohighlight">\(X\)</span> axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1">#c*R*M</span>
+
+<span class="c1">#c*R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After the stretch has been completed, the matrix <span class="math notranslate nohighlight">\(U\)</span> does the reverse transformation: mirrors the <span class="math notranslate nohighlight">\(X'\)</span> axis and rotates <span class="math notranslate nohighlight">\(\frac{1}{4}\pi\)</span> counterclockwise.</p>
+<p>Now we can say that the most stretched vector <span class="math notranslate nohighlight">\(x_M\)</span> will be the
+<span class="math notranslate nohighlight">\(
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+\)</span> (or it’s mirrored counterpart)
+unit vector, which during the transformations is aligned along the direction of the stretch operation and it’s Euclidian length will be <span class="math notranslate nohighlight">\(3\)</span>, and the least stretched vector <span class="math notranslate nohighlight">\(x_m\)</span> is the
+<span class="math notranslate nohighlight">\(
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}
+\)</span> (or it’s mirrored counterpart), which lies perpendicular to the axis of the stretch operation. It’s Euclidian length remains <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>Now let’s look at the Eigenvalues and Eigenvectors of the matrix (the values and the vectors can be easily calculated by hand):</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val</span><span class="p">,</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Eigenvalues: &#39;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Eigenvectors:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues:  [3. 1.]
+Eigenvectors:
+[[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result coincides with the result derived from SV decomposition: the
+<span class="math notranslate nohighlight">\(
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+\)</span>
+vector is stretched 3 times, the
+<span class="math notranslate nohighlight">\(
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}
+\)</span>
+vector remains the same.</p>
+</div>
+</div>
+<div class="section" id="problem-6">
+<h3>Problem 6<a class="headerlink" href="#problem-6" title="Permalink to this headline">¶</a></h3>
+<p>Find eigenvalues and eigenvectors of the following matrices:<br />
+(a)
+<span class="math notranslate nohighlight">\(A_1=
+\begin{bmatrix}
+0 &amp; 1\\
+-1 &amp; 0
+\end{bmatrix}
+\)</span>
+. If <span class="math notranslate nohighlight">\(x\)</span> is any real vector, how is <span class="math notranslate nohighlight">\(y=A_1x\)</span> related to <span class="math notranslate nohighlight">\(x\)</span> geometrically?</p>
+<p>(b)
+<span class="math notranslate nohighlight">\(A_2=
+\begin{bmatrix}
+1 &amp; 1 &amp; 0\\
+0 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\)</span>
+. What is the rank of <span class="math notranslate nohighlight">\(A_2\)</span>? How many eigenvectors are there?</p>
+<div class="section" id="id5">
+<h4>Solution<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>The calculation of eigenvalues and eigenvectors may be performed by hand easily, as well as with <em>NumPy</em> package.</p>
+<p>We start with matrix <span class="math notranslate nohighlight">\(A_1\)</span>:</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">A2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">val1</span><span class="p">,</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="n">val2</span><span class="p">,</span> <span class="n">vec2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
+
+<span class="n">print_eig</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues and eigenvectors for matrix A1:
+[0.+1.j 0.-1.j]
+[[0.70710678+0.j         0.70710678-0.j        ]
+ [0.        +0.70710678j 0.        -0.70710678j]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Instantly from one glance at the matrix <span class="math notranslate nohighlight">\(A_1\)</span>, as well as by seeing the result of eigen_operations, we derive that the matrix conducts a rotation. There are no real eigenvectors, obviously, as there are no vectors <span class="math notranslate nohighlight">\(x\)</span> that would be collinearly translated into another vectors <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Now, let’s analyze the matrix <span class="math notranslate nohighlight">\(A_2\)</span>. It is obvious, that <span class="math notranslate nohighlight">\(rg(A_2) = 1\)</span>, because we can perform simple row operations (<span class="math notranslate nohighlight">\(r_2 = r_2 - r_3; \hspace{3mm} r_1 = r_1 - (r_2 - r_3)\)</span>) to get the resulting matrix <span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0
+\end{bmatrix}
+\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_eig</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues and eigenvectors for matrix A2:
+[1. 1. 1.]
+[[ 1.00000000e+00 -1.00000000e+00  1.00000000e+00]
+ [ 0.00000000e+00  2.22044605e-16 -2.22044605e-16]
+ [ 0.00000000e+00  0.00000000e+00  4.93038066e-32]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is one eigenvalue <span class="math notranslate nohighlight">\(\lambda = 1\)</span> of multiplicity 3, and only one eigenvector
+<span class="math notranslate nohighlight">\(h = 
+\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}
+\)</span>
+This matrix is a linear operator that projects on <span class="math notranslate nohighlight">\(YZ\)</span> plane.</p>
+</div>
+</div>
+</div>
+<span id="document-notebooks/ProblemSet2"></span><div class="section" id="problem-set-2">
+<h2>Problem Set 2<a class="headerlink" href="#problem-set-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem-1">
+<h3>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h3>
+<p>Consider linear system</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+2x_1 + x_2 = 1\\
+x_1 + 2x_2 + x_3 = 2\\
+x_2 + 2x_3 = 3
+\end{align*}
+\end{split}\]</div>
+<p>(a) Find the <span class="math notranslate nohighlight">\(LU\)</span> factorization of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>.   Show that <span class="math notranslate nohighlight">\(U = DL^T\)</span> with <span class="math notranslate nohighlight">\(D\)</span> diagonal and thus <span class="math notranslate nohighlight">\(A=LDL^T\)</span>. Find the exact solution using the <span class="math notranslate nohighlight">\(LU\)</span> factorization.</p>
+<p>(b) Solve the system using Jacobi and Gauss-Seidel iterations. How many iterations are needed to reduce the relative error of the solution to <span class="math notranslate nohighlight">\(10^{-8}\)</span>?</p>
+<p>(c) Plot in semilog scales the relative errors by both methods as a function of the number of iterations.</p>
+<p>(d) Explain the convergence rate. Which of the methods is better and why?</p>
+<div class="section" id="solution">
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
+<p>Let us perform the <span class="math notranslate nohighlight">\(LU\)</span> factorization by hand:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+1 &amp; 2 &amp; 1\\
+0 &amp; 1 &amp; 2
+\end{bmatrix}
+\Rightarrow (R_2 - \frac{1}{2}R_1)
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 1\\
+0 &amp; 1 &amp; 2
+\end{bmatrix}
+\Rightarrow (R_3 - \frac{2}{3}R_2)
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 1\\
+0 &amp; 0 &amp; \frac{4}{3}
+\end{bmatrix}
+= U;
+\hspace{10mm}
+L =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0\\
+\frac{1}{2} &amp; 1 &amp; 0\\
+0 &amp; \frac{2}{3} &amp; 1
+\end{bmatrix}
+\end{align*}
+\end{split}\]</div>
+<p>And check it via <em>numpy</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">lin</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">abc</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">bmatrix</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a LaTeX bmatrix</span>
+
+<span class="sd">    :a: numpy array</span>
+<span class="sd">    :returns: LaTeX bmatrix as a string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;bmatrix can at most display two dimensions&#39;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\begin</span><span class="si">{bmatrix}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="n">rv</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;  &#39;</span> <span class="o">+</span> <span class="s1">&#39; &amp; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+    <span class="n">rv</span> <span class="o">+=</span>  <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\end</span><span class="si">{bmatrix}</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rv</span><span class="p">)</span>
+
+<span class="n">E</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">U</span> <span class="o">=</span> <span class="n">lin</span><span class="o">.</span><span class="n">lu</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">permute_l</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">U:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L:
+[[1.         0.         0.        ]
+ [0.5        1.         0.        ]
+ [0.         0.66666667 1.        ]]
+
+U:
+[[2.         1.         0.        ]
+ [0.         1.5        1.        ]
+ [0.         0.         1.33333333]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us show, that <span class="math notranslate nohighlight">\(U = DL^T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L^T = 
+\begin{bmatrix}
+1 &amp; \frac{1}{2} &amp; 0\\
+0 &amp; 1 &amp; \frac{2}{3}\\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+;\hspace{10mm}
+D = 
+\begin{bmatrix}
+2 &amp; 0 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+;\hspace{10mm}
+U = DL^T
+\end{split}\]</div>
+<p>That means, <span class="math notranslate nohighlight">\(A = LU = LDL^T\)</span>.</p>
+<p>Now, let us solve the system using <span class="math notranslate nohighlight">\(LU\)</span> factorization:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Ax = b \hspace{3mm} \Rightarrow \hspace{3mm} LUx = b;
+\\
+\begin{align*}
+\begin{cases}
+Ux = y;\\
+Ly = b
+\end{cases}
+\end{align*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+  1 &amp; 0 &amp; 0\\
+  \frac{1}{2} &amp; 1 &amp; 0\\
+  0 &amp; \frac{2}{3} &amp; 1\\
+\end{bmatrix}
+\begin{bmatrix}
+  y_1\\
+  y_2\\
+  y_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}
+\Rightarrow
+\begin{cases}
+y_1 = 1\\
+y_2 = \frac{3}{2}\\
+y_3 = 2
+\end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+2 &amp; 1 &amp; 0\\
+0 &amp; \frac{3}{2} &amp; 1\\
+0 &amp; 0 &amp; \frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+\frac{3}{2}\\
+2
+\end{bmatrix}
+\Rightarrow
+\begin{cases}
+x_1 = \frac{1}{2}\\
+x_2 = 0\\
+x_3 = \frac{3}{2}
+\end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x = 
+\begin{bmatrix}
+1/2\\
+0\\
+3/2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Next we solve the system using Jacobi and Gauss-Seidel methods:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="n">D</span><span class="p">))</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="n">D</span><span class="p">))</span>
+
+<span class="n">x_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-8</span>
+<span class="n">err</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x_init</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">T</span> <span class="c1">#initial x</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">def</span> <span class="nf">Jacobi</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x_init</span><span class="p">)</span>
+
+    <span class="n">max_iters</span> <span class="o">=</span> <span class="mi">500</span>
+
+    <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    
+
+    <span class="n">iters</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">err</span> <span class="o">&gt;</span> <span class="n">tol</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">iters</span> <span class="o">&lt;=</span> <span class="n">max_iters</span><span class="p">))</span> <span class="p">:</span>
+        <span class="n">iters</span> <span class="o">=</span> <span class="n">iters</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">bb</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">U</span> <span class="o">+</span> <span class="n">L</span><span class="p">)</span><span class="o">*</span><span class="n">x</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">bb</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">err_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x_exact</span><span class="p">)</span>
+
+        <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_iter</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+        <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">err_exact</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span>
+
+    <span class="k">return</span> <span class="n">err_iter</span><span class="p">,</span> <span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">iters</span>
+
+<span class="k">def</span> <span class="nf">Gauss_Seidel</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x_init</span><span class="p">)</span>
+
+    <span class="n">max_iters</span> <span class="o">=</span> <span class="mi">250</span>
+
+    <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+    <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+    <span class="n">iters</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">err</span> <span class="o">&gt;</span> <span class="n">tol</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">iters</span> <span class="o">&lt;=</span> <span class="n">max_iters</span><span class="p">)):</span>
+        <span class="n">iters</span> <span class="o">=</span> <span class="n">iters</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">bb</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">U</span><span class="o">*</span><span class="n">x</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">D</span><span class="o">+</span><span class="n">L</span><span class="p">,</span> <span class="n">bb</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">err_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_new</span> <span class="o">-</span> <span class="n">x_exact</span><span class="p">)</span>
+
+        <span class="n">err_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_iter</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+        <span class="n">err_exact_iter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">err_exact</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_new</span>
+
+    <span class="k">return</span> <span class="n">err_iter</span><span class="p">,</span> <span class="n">err_exact_iter</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">iters</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format=&#39;svg&#39;
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+<span class="n">errs_j</span><span class="p">,</span> <span class="n">ex_errs_j</span><span class="p">,</span> <span class="n">x_j</span><span class="p">,</span> <span class="n">i_j</span> <span class="o">=</span> <span class="n">Jacobi</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errs_j</span><span class="p">)</span>
+
+<span class="n">errs_g</span><span class="p">,</span> <span class="n">ex_errs_g</span><span class="p">,</span> <span class="n">x_g</span><span class="p">,</span> <span class="n">i_g</span> <span class="o">=</span> <span class="n">Gauss_Seidel</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">tol</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errs_g</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;Jacobi&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss_Seidel&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Iterations&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Relative error&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-1</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="C:/Users/backg/OneDrive/Workspace/Study/Skoltech/MMEAS/MMEASbook/_build/jupyter_execute/ProblemSet2_13_0.svg" src="C:/Users/backg/OneDrive/Workspace/Study/Skoltech/MMEAS/MMEASbook/_build/jupyter_execute/ProblemSet2_13_0.svg" /></div>
+</div>
+<p>As we see, it took <span class="math notranslate nohighlight">\(26\)</span> iterations for Gauss-Seidel method to reach the target tolerance of <span class="math notranslate nohighlight">\(10^{-8}\)</span>, while Jacobi method required <span class="math notranslate nohighlight">\(54\)</span> iterations.</p>
+<p>This can be explained by the following: in Gauss-Seidel, as soon as we acquire a new iteration of a vector <span class="math notranslate nohighlight">\(x\)</span> component <span class="math notranslate nohighlight">\(x_i^{(k+1)}\)</span>, we instantly utilize this updated value in the computation of the following components: <span class="math notranslate nohighlight">\(x_i^{(k+1)} = f(x_1^{(k+1)}, ..., x_{i-1}^{(k+1)}, x_{i+1}^{(k)}, ..., x_n^{(k)})\)</span>. In Jacobi, we calculate the new vector <span class="math notranslate nohighlight">\(x^{k+1}\)</span> relying solely on the result of the previous iteration: <span class="math notranslate nohighlight">\(x_i^{k+1} = f(x_j^{(k)}),\hspace{3mm}j \neq i\)</span>.</p>
+</div>
+</div>
+<div class="section" id="problem-2">
+<h3>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h3>
+<p>Factor these two matrices <span class="math notranslate nohighlight">\(A\)</span> into <span class="math notranslate nohighlight">\(S\Lambda S^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A1 = 
+\begin{bmatrix}
+1 &amp; 2\\
+0 &amp; 3
+\end{bmatrix}
+,\hspace{3mm}
+A2 =
+\begin{bmatrix}
+1 &amp; 2\\
+0 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Using that factorization, find for both: (a) <span class="math notranslate nohighlight">\(A^3\)</span>; (b) <span class="math notranslate nohighlight">\(A^{-1}\)</span>.</p>
+<div class="section" id="id1">
+<h4>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Firstly, we find the eigenvalues and eigenvectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1-\lambda &amp; 2\\
+0 &amp; 3-\lambda
+\end{bmatrix}
+ = 0
+\end{split}\]</div>
+<p>By performing simple calculations by hand, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_1 = 
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_1 = 1
+\\
+h_2 =
+\frac{\sqrt{2}}{2}
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_2 = 3
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We normalized the eigenvectors</p>
+</div>
+<p>Now let’s perform a check with <em>numpy</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">val1</span><span class="p">,</span> <span class="n">vec1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E_values A1:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E_vectors A1:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vec1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E_values A1:
+[1. 3.]
+E_vectors A1:
+[[1.         0.70710678]
+ [0.         0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we have our vectors and values, we can construct <span class="math notranslate nohighlight">\(\Lambda\)</span> and <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(S^{-1}\)</span> matrices:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Lambda</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">val1</span><span class="p">))</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">vec1</span>
+<span class="n">Si</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lambda:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Lambda</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S_inverse:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Si</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S:
+[[1.         0.70710678]
+ [0.         0.70710678]]
+Lambda:
+[[1. 0.]
+ [0. 3.]]
+S_inverse:
+[[ 1.         -1.        ]
+ [ 0.          1.41421356]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}S = 
+\begin{bmatrix}
+1 &amp; \sqrt{2}/2\\
+0 &amp; \sqrt{2}/{2}
+\end{bmatrix}
+;\hspace{3mm}
+\Lambda = 
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 3
+\end{bmatrix}
+;\hspace{3mm}
+S^{-1} = 
+\begin{bmatrix}
+1 &amp; -1\\
+0 &amp; 2/\sqrt{2}
+\end{bmatrix}
+\end{split}\]</div>
+<p>From now, we can fing the <span class="math notranslate nohighlight">\(A^3\)</span> powered matrix by simply multiplying the decomposition:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^3 = S\Lambda S^{-1} S \Lambda S^{-1} S \Lambda S^{-1} =
+\\
+\hspace{1mm}
+\\
+= S \Lambda^3 S^{-1}.
+\end{split}\]</div>
+<p>And for <span class="math notranslate nohighlight">\(\Lambda\)</span> it is easy to power because it is a diagonal matrix.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Lambda ^3 =
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 9
+\end{bmatrix}
+,
+\\
+\hspace{1mm}
+\\
+S\Lambda ^3 S^{-1} = 
+\begin{bmatrix}
+1 &amp; 8\\
+0 &amp; 9
+\end{bmatrix}
+\end{split}\]</div>
+<p>For inverse matrix:</p>
+<div class="math notranslate nohighlight">
+\[
+S\Lambda S^{-1} A_1^{-1} = E, \Rightarrow A_1^{-1} = S^{-1} \Lambda ^{-1} S
+\]</div>
+<p>We already have <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(S^{-1}\)</span>, and for diagonal <span class="math notranslate nohighlight">\(\Lambda\)</span> the inverse matrix contains the inverse diagonal elements of <span class="math notranslate nohighlight">\(\Lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Lambda ^{-1}= 
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 1/3
+\end{bmatrix}
+\end{split}\]</div>
+<p>So we easily find <span class="math notranslate nohighlight">\(A_1^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_1^{-1} = 
+\begin{bmatrix}
+1 &amp; \sqrt{2}{3}\\
+0 &amp; 1/3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Now let’s look at the second matrix <span class="math notranslate nohighlight">\(A_2\)</span>. Instantly we notice it is a rank-1 matrix, thus, <span class="math notranslate nohighlight">\(A_2^{-1}\)</span> matrix doesn’t exist.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_1 = 
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_1 = 0
+\\
+\hspace{1mm}
+\\
+h_2 =
+\begin{bmatrix}
+1\\
+3
+\end{bmatrix}
+,\hspace{3mm}
+\lambda_2 = 4
+\end{split}\]</div>
+<p>It’s eigenvectors are non-collinear and form a basis in 2-dimensional space. Thus we can perform the factorization.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S = 
+\begin{bmatrix}
+1 &amp; 1\\
+-1 &amp; 3
+\end{bmatrix}
+;\hspace{3mm}
+\Lambda = 
+\begin{bmatrix}
+0 &amp; 0\\
+0 &amp; 4
+\end{bmatrix}
+;\hspace{3mm}
+S^{-1} =  
+\begin{bmatrix}
+3/4 &amp; -1/4\\
+1/4 &amp; 1/4
+\end{bmatrix}
+\end{split}\]</div>
+<p>For <span class="math notranslate nohighlight">\(A_2^3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_2^3 = 
+\begin{bmatrix}
+64 &amp; 64\\
+192 &amp; 192
+\end{bmatrix}
+.
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="problem-3">
+<h3>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h3>
+<p>Given a system <span class="math notranslate nohighlight">\(Ax = b\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = 
+\begin{bmatrix}
+  1 &amp; -1 &amp; -3\\
+  2 &amp; 3 &amp; 4\\
+  -2 &amp; 1 &amp; 4\\
+\end{bmatrix}
+,\hspace{3mm}
+b = 
+\begin{bmatrix}
+  3\\
+  a\\
+  -1\\
+\end{bmatrix}
+,
+\end{split}\]</div>
+<p>for which <span class="math notranslate nohighlight">\(a\)</span> there is a solution? Find the general solution of the system for that <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="section" id="id2">
+<h4>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Let’s check the matrix’ rank:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rank: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">rank</span><span class="p">()))</span>
+<span class="n">A</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rank: 2
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; -1\\0 &amp; 1 &amp; 2\\0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>This matrix is a rank-2 matrix. Let’s find it’s left nullspace, write down the solvability condition and find the appropriate <span class="math notranslate nohighlight">\(a\)</span>.
+Starting with the left null-space:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">nullspace</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{8}{5}\\\frac{1}{5}\\1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>We want to fulfill the following condition:</p>
+<div class="math notranslate nohighlight">
+\[
+y^Tb = 0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">ans</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{a: -19}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we see, the system is solvable with <span class="math notranslate nohighlight">\(a = -19\)</span>. Let us perform some check:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="mi">19</span><span class="p">)</span>
+<span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="n">bs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[\begin{matrix}0\end{matrix}\right]\]</div>
+</div>
+</div>
+<p>Now as we have our vector <span class="math notranslate nohighlight">\(b\)</span> with wich the system is solvable, we may find the general solution for the system:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a b c&#39;</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">A</span><span class="p">,</span> <span class="n">bs</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linsolve</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">bs</span><span class="p">),</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span> <span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( c - 2, \  - 2 c - 5, \  c\right)\right\}\]</div>
+</div>
+</div>
+<p>With <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span> we get our solution:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x =
+\begin{bmatrix}
+-2\\
+-5\\
+0
+\end{bmatrix}
++
+\begin{bmatrix}
+1\\
+-2\\
+1
+\end{bmatrix}
+\cdot
+c.
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="problem-4">
+<h3>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 </div>
 
@@ -229,15 +1391,6 @@
 
 <div class='prev-next-bottom'>
     
-     <div id="next">
-        <a class="right-next" href="notebooks/ProblemSet1.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Problem Set 1</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
