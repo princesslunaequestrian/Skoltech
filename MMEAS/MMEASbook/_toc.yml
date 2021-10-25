@@ -6,3 +6,4 @@ root: intro
 chapters:
 - file: notebooks/ProblemSet1
 - file: notebooks/ProblemSet2
+- file: notebooks/ProblemSet3
