@@ -76,7 +76,8 @@ X = [ones(m,1) X];
 
 
 % foward propagation
-a0 = X; 
+% a0 = X; 
+
 a1 = sigmoid(Theta1 * X');
 a1 = [ones(m,1) a1'];
 
@@ -100,7 +101,7 @@ J = (1/m) * sum ( sum (  (-yk) .* log(h_theta)  -  (1-yk) .* log(1-h_theta) ));
 % For the matrices Theta1 and Theta2, this corresponds to the first column of each matrix.
 t1 = Theta1(:,2:size(Theta1,2));
 t2 = Theta2(:,2:size(Theta2,2));
-t3 = Theta3(:,2:size(Theta3,3));
+t3 = Theta3(:,2:size(Theta3,2));
 
 % regularization formula
 Reg = lambda  * (sum( sum ( t1.^ 2 )) + sum( sum ( t2.^ 2 )) + sum( sum (t3.^2))) / (2*m);
