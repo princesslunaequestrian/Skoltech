@@ -604,6 +604,19 @@ y
 # 
 
 # A_2 is skew-symmetric, for non-symmetric matrices the norm equals to the greatest singular value:
+# 
+# $$
+# 
+# A_2^TA_2 = 
+# \begin{bmatrix}
+# 2 & 0\\
+# 0 & 2
+# \end{bmatrix}
+# ,\\
+# \lambda_1 = \lambda_2 = 2,\\
+# \sigma_1 = \sigma_2 = \sqrt{2}
+# 
+# $$
 
 # In[21]:
 
@@ -621,7 +634,7 @@ A2.singular_value_decomposition()[1]
 # \sigma_1 = \sigma_2 = \sqrt{2},\\
 # 
 # ||A_2|| = \max\limits_{i} \big \{ \sigma_i \big \} = \sqrt{2},\\
-# \kappa_2 = \frac{\max\limits_{i} \big \{ \sigma_i \big \}}{\min\limits_{i} \big \{ \sigma_i \big \}} = 1
+# \kappa_2 = \frac{\max\limits_{i} \big \{ \sigma_i \big \}}{\min\limits_{i} \big \{ \sigma_i \big \}} = 1.
 # 
 # $$
 

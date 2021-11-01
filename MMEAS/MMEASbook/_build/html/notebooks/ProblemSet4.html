@@ -1007,6 +1007,15 @@ A_2 =
 (2-\lambda)^2 - 1 = 0,\\\end{split}\\\begin{split}\lambda_1 = 3, \hspace{3mm} \lambda_2 = 1,\\\end{split}\\\begin{split}||A_1|| = \max\limits_{i} \big \{ \lambda_i \big \} = 3,\\
 \kappa_1 = \frac{\max\limits_{i} \big \{ \lambda_i \big \}}{\min\limits_{i} \big \{ \lambda_i \big \}} = 3\end{split}\end{aligned}\end{align} \]</div>
 <p>A_2 is skew-symmetric, for non-symmetric matrices the norm equals to the greatest singular value:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_2^TA_2 = 
+\begin{bmatrix}
+2 &amp; 0\\
+0 &amp; 2
+\end{bmatrix}
+,\\
+\lambda_1 = \lambda_2 = 2,\\
+\sigma_1 = \sigma_2 = \sqrt{2}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
@@ -1025,7 +1034,7 @@ A_2 =
 </div>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\begin{split}\sigma_1 = \sigma_2 = \sqrt{2},\\\end{split}\\\begin{split}||A_2|| = \max\limits_{i} \big \{ \sigma_i \big \} = \sqrt{2},\\
-\kappa_2 = \frac{\max\limits_{i} \big \{ \sigma_i \big \}}{\min\limits_{i} \big \{ \sigma_i \big \}} = 1\end{split}\end{aligned}\end{align} \]</div>
+\kappa_2 = \frac{\max\limits_{i} \big \{ \sigma_i \big \}}{\min\limits_{i} \big \{ \sigma_i \big \}} = 1.\end{split}\end{aligned}\end{align} \]</div>
 <p>$$</p>
 </div>
 </div>
