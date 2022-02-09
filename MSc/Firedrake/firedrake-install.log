@@ -1,0 +1,8 @@
+2022-01-23 23:54:17,830 INFO   Running firedrake-install
+2022-01-23 23:54:17,836 DEBUG  Installer running with: C:\Users\backg\AppData\Local\Programs\Python\Python38\python.exe
+2022-01-23 23:54:17,836 DEBUG  Python version: 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]
+2022-01-23 23:54:17,836 DEBUG  *** Current environment (output of 'env') ***
+2022-01-23 23:54:17,836 DEBUG  Running command 'env'
+2022-01-23 23:54:17,842 INFO   
+
+Install log saved in C:\Users\backg\OneDrive\Workspace\Study\Skoltech\MSc\Firedrake\firedrake-install.log
